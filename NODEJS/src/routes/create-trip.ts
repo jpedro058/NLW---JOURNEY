@@ -40,9 +40,9 @@ export async function createTrip(app: FastifyInstance) {
         throw new ClientError("Start date must be before end date");
       }
 
-      if (dayjs(starts_at).isBefore(dayjs())) {
+      /* if (dayjs(starts_at).isBefore(dayjs())) {
         throw new ClientError("Start date must be in the future");
-      }
+      } */
 
       const trip = await prisma.trip.create({
         data: {

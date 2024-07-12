@@ -34,7 +34,10 @@ export default function InviteGuestModal({
         </p>
         <div className="flex flex-wrap gap-2">
           {emailsToInvite?.map((email) => (
-            <div className="flex items-center justify-between gap-4 py-1.5 px-2.5 rounded-md bg-zinc-800">
+            <div
+              key={email}
+              className="flex items-center justify-between gap-4 py-1.5 px-2.5 rounded-md bg-zinc-800"
+            >
               <span className="text-zinc-300">{email}</span>
               <X
                 size={16}
